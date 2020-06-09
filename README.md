@@ -23,7 +23,8 @@ var options = {
   qs : {
     q : "test",
     filter : 0,
-    pws : 0
+    pws : 0,
+    nfpr: 1
   },
   num : 10
 };
