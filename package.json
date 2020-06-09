@@ -1,0 +1,34 @@
+{
+  "name": "serp-extended",
+  "version": "1.0.0",
+  "description": "This module allows to execute search on Google with or without proxies. It provides different options for scraping the google results (either the list of the referenced sites or the number of results)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha 'test/**/*.js' --timeout 20000",
+    "pretest": "rm -rf ./logs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/utkarsh914/serp-extended.git"
+  },
+  "keywords": [
+    "google",
+    "search",
+    "scraper",
+    "google scraper",
+    "SERP",
+    "SEO",
+    "extended",
+    "scrape google results"
+  ],
+  "author": "Utkarsh Tiwari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/utkarsh914/serp-extended/issues"
+  },
+  "homepage": "https://github.com/utkarsh914/serp-extended#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "request-promise-native": "^1.0.8"
+  }
+}

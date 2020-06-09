@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "adidas-es8"
+  ],
+  "env": {
+    "browser": false,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "rules": {
+    "no-console": ["error", { "allow": ["log", "warn", "error"] }],
+    "max-len" :  ["error", { "code": 200 }]
+  },
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module"
+  }
+}
