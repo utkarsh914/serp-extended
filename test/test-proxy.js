@@ -1,5 +1,5 @@
-const { expect } = require('chai');
-const serp = require('../index.js');
+const { expect } = require('chai')
+const serp = require('../index.js')
 
 describe.skip('Test Simple Search', async () => {
   it('expect return 10 links with a minimal option set', async () => {
@@ -8,17 +8,17 @@ describe.skip('Test Simple Search', async () => {
         q: 'test'
       },
       proxy: 'http://user:password@host'
-    };
+    }
 
     try {
-      const links = await serp.search(options);
+      const links = await serp.search(options)
 
-      console.log(links);
+      console.log(links)
 
-      expect(links).to.have.lengthOf(10);
+      expect(links).to.have.lengthOf(10)
     } catch (e) {
-      console.log('Error', e);
-      expect(e).be.null;
+      console.log('Error', e)
+      expect(e).be.null
     }
-  });
-});
+  })
+})

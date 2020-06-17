@@ -1,5 +1,5 @@
-const { expect } = require('chai');
-const serp = require('../index.js');
+const { expect } = require('chai')
+const serp = require('../index.js')
 
 describe('Test Simple Search', async () => {
   it('expect return 10 links with a minimal option set', async () => {
@@ -7,19 +7,19 @@ describe('Test Simple Search', async () => {
       qs: {
         q: 'test'
       }
-    };
+    }
 
     try {
-      const links = await serp.search(options);
+      const links = await serp.search(options)
 
-      console.log(links);
+      console.log(links)
 
-      expect(links).to.have.lengthOf(10);
+      expect(links).to.have.lengthOf(10)
     } catch (e) {
-      console.log('Error', e);
-      expect(e).be.null;
+      console.log('Error', e)
+      expect(e).be.null
     }
-  });
+  })
 
   it('expect return 12 links with a specific host and extra parameters', async () => {
     const options = {
@@ -31,16 +31,16 @@ describe('Test Simple Search', async () => {
         lr: 'lang_fr',
         cr: 'BE'
       }
-    };
+    }
 
     try {
-      const links = await serp.search(options);
+      const links = await serp.search(options)
 
-      expect(links).to.have.lengthOf(12);
+      expect(links).to.have.lengthOf(12)
     } catch (e) {
-      expect(e).be.null;
+      expect(e).be.null
     }
-  });
+  })
 
   it('expect return 15 links with delay between each requests', async () => {
     const options = {
@@ -53,16 +53,16 @@ describe('Test Simple Search', async () => {
         lr: 'lang_fr',
         cr: 'BE'
       }
-    };
+    }
 
     try {
-      const links = await serp.search(options);
+      const links = await serp.search(options)
 
-      expect(links).to.have.lengthOf(15);
+      expect(links).to.have.lengthOf(15)
     } catch (e) {
-      expect(e).be.null;
+      expect(e).be.null
     }
-  });
+  })
 
   it('expect return 100 links within one request', async () => {
     const options = {
@@ -75,18 +75,18 @@ describe('Test Simple Search', async () => {
         cr: 'BE',
         num: 100
       }
-    };
+    }
 
     try {
-      const links = await serp.search(options);
+      const links = await serp.search(options)
 
-      console.log(links);
+      console.log(links)
 
-      expect(links).to.have.lengthOf(100);
+      expect(links).to.have.lengthOf(100)
     } catch (e) {
-      expect(e).be.null;
+      expect(e).be.null
     }
-  });
+  })
 
   it('expect return 0 for number of results of a non indexed site', async () => {
     const options = {
@@ -95,16 +95,16 @@ describe('Test Simple Search', async () => {
       qs: {
         q: 'site:objectifxxxssq-web.be'
       }
-    };
+    }
 
     try {
-      const nbr = await serp.search(options);
+      const nbr = await serp.search(options)
 
-      expect(nbr).equals(0);
+      expect(nbr).equals(0)
     } catch (e) {
-      expect(e).be.null;
+      expect(e).be.null
     }
-  });
+  })
 
   it('expect return a number > 0 for the number of results of an indexed site', async () => {
     const options = {
@@ -116,14 +116,14 @@ describe('Test Simple Search', async () => {
         lr: 'lang_fr',
         cr: 'BE'
       }
-    };
+    }
 
     try {
-      const num = await serp.search(options);
+      const num = await serp.search(options)
 
-      expect(num).to.be.an('number').above(0);
+      expect(num).to.be.an('number').above(0)
     } catch (e) {
-      expect(e).be.null;
+      expect(e).be.null
     }
-  });
-});
+  })
+})
