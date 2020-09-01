@@ -1,7 +1,7 @@
 # serp-extended
 This module is an extention to 'serp' module.
 It adds an option to exclude whichever websites you want from your search results.
-It to execute search on Google with or without proxies.
+It allows to execute search on Google with or without proxies.
 It provides different options for scraping the google results (either the list of the referenced sites or the number of results).
 
 
