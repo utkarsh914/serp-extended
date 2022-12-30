@@ -39,7 +39,7 @@
     "eslint-config-adidas-es8": "^1.2.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-promise": "^4.2.1",
-    "mocha": "^7.2.0",
+    "mocha": "^10.2.0",
     "simple-proxies": "^1.0.3"
   }
 }
